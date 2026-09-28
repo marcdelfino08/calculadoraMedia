@@ -1,0 +1,160 @@
+/* ---------- Variáveis (paleta) ---------- */
+:root {
+    --azul-escuro: #1e3a8a;
+    --azul: #2563eb;
+    --azul-hover: #1d4ed8;
+    --fundo-claro: #eff6ff;
+    --texto: #111827;
+    --texto-suave: #6b7280;
+    --borda: #d1d5db;
+    --branco: #ffffff;
+}
+
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+    background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+
+    /* Centraliza e coloca os dois blocos lado a lado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 40px 24px;
+}
+
+/* ---------- Bloco de texto (esquerda) ---------- */
+.container-frase {
+    max-width: 380px;
+    color: var(--branco);
+    text-align: left;
+}
+
+#titulo-inicial {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    line-height: 1.15;
+    margin: 0 0 20px;
+}
+
+#p-inicial {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+/* ---------- Calculadora (direita) ---------- */
+.container-calculadora {
+    width: 340px;
+    padding: 32px;
+    background-color: var(--branco);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+}
+
+#titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin: 0 0 6px;
+    text-align: center;
+    color: var(--azul-escuro);
+}
+
+#pInicial {
+    margin: 0 0 24px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+/* ---------- Formulário ---------- */
+label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+input {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--azul);
+    color: var(--branco);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--azul-hover);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ---------- Resultado ---------- */
+.resultado {
+    margin: 0;
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--fundo-claro);
+    border-radius: 8px;
+    color: var(--azul-escuro);
+}
+
+#resultado {
+    font-size: 1.3rem;
+}
+
+/* ---------- Responsivo (celular/tablet) ---------- */
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .container-frase {
+        text-align: center;
+    }
+
+    #titulo-inicial {
+        font-size: 2.2rem;
+    }
+
+    .container-calculadora {
+        width: 100%;
+        max-width: 340px;
+    }
+}

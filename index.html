@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Média</title>
+    <link rel="stylesheet" href="css/new-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Fase inicial-->
+    <div class="container-frase">
+        <h1 id="titulo-inicial">Descubra sua média final aqui</h1>
+        <p id="p-inicial">Insira suas notas aqui para calcular sua média anual</p>
+    </div>
+
+    <!--Calculadora-->
+    <div class="container-calculadora">
+        <h1 id="titulo">Calculadora de Média</h1>
+        <p id="pInicial">Revele sua nota média aqui!</p>
+
+        <label for="nota1">Primeira nota:</label>
+        <input type="number" id="nota1" placeholder="Insira aqui:">
+
+        <label for="nota2">Segunda nota:</label>
+        <input type="number" id="nota2" placeholder="Insira aqui:">
+
+        <label for="nota3">Terceira nota:</label>
+        <input type="number" id="nota3" placeholder="Insira aqui:">
+
+        <button onclick="calcularMedia()">Calcular média</button>
+
+        <p class="resultado">Média:
+             <span id="resultado">---</span>
+            </p>
+    </div>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
